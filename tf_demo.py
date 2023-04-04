@@ -73,13 +73,12 @@ with tf.Session() as sess:
 # 4. placehoder
 
 
-input1 = tf.placeholder(tf.float32) # 需要定义placeholder的数据类型，一般为float32
+input1 = tf.placeholder(tf.float32)  # 需要定义placeholder的数据类型，一般为float32
 input2 = tf.placeholder(tf.float32)
-
 
 # 定义output步骤
 
-output = tf.multiply(input1, input2) # 乘法
+output = tf.multiply(input1, input2)  # 乘法
 
 # 执行
 
