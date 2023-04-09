@@ -63,6 +63,7 @@ print("\nVariable:")
 v1 = tf.Variable(tf.random_normal(shape=[4, 3], mean=0, stddev=1), name='v1')
 v2 = tf.Variable(tf.constant([1, 2]), name='v2')
 v3 = tf.Variable(tf.ones([4, 3]), name='v3')
+
 with tf.Session() as sess:
     # 需要先初始化变量，而常量不用初始化 注意：只要使用tf.Variable()语法，必须先初始化变量
     sess.run(tf.global_variables_initializer())
@@ -82,5 +83,9 @@ output = tf.multiply(input1, input2)  # 乘法
 
 # 执行
 
+v1 = tf.random_normal([2, 3], stddev=2)  # 会产生一个2x3矩阵，矩阵中的元素是均值为0、标准差为2的随机数。
+
 with tf.Session() as sess:
     print(sess.run(output, feed_dict={input1: [5.3], input2: [2.0]}))
+    print(sess.run(v1))
+    print(v1)
