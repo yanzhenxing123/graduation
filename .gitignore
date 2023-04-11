@@ -133,3 +133,6 @@ dmypy.json
 data/
 
 test.py
+
+tmp/
+MNIST_data/
