@@ -1,7 +1,7 @@
 """
 @Author: yanzx
 @Date: 2023/4/11 11:36
-@Description: 搭建一个简单的神经网络
+@Description: 使用tensorflow搭建一个简单的神经网络
 """
 from loguru import logger
 
@@ -31,7 +31,6 @@ with tf.Session() as sess:
     for i in range(1000):
         batch_xs, batch_ys = mnist.train.next_batch(100)
         sess.run(train_step, feed_dict={x: batch_xs, y: batch_ys})
-
     # 保存模型
     logger.info("*" * 100)
     saver.save(sess, "./tmp/model.ckpt")
